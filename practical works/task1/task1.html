@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розклад на декілька тижнів</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <style>
+        /* Базові стилі для сторінки */
+        body {
+            font-family: "Lucida Console", "Courier New", monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        section {
+            margin: 2em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Background colors for different types of classes */
+        .lectures {
+            background-color: #fff3cd;
+        }
+
+        .labs {
+            background-color: #cce5ff;
+        }
+
+        .seminars {
+            background-color: #f8d7da;
+        }
+
+        .practice {
+            background-color: #d4edda;
+        }
+
+        td {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Розклад занять на декілька тижнів</h1>
+    </header>
+
+    <!-- 23-29 вересня 2024 -->
+    <section>
+        <h2>Розклад на тиждень 23-29 вересня 2024</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Час</th>
+                    <th>23.09.2024<br>Понеділок</th>
+                    <th>24.09.2024<br>Вівторок</th>
+                    <th>25.09.2024<br>Середа</th>
+                    <th>26.09.2024<br>Четвер</th>
+                    <th>27.09.2024<br>П'ятниця</th>
+                    <th>28.09.2024<br>Субота</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:00 - 09:35</td>
+                    <td class="lectures">ВМ [Лк] <br> ауд. Дистанц. <br> Білоусова С.В.</td>
+                    <td class="labs">ООП-2016 [Лб] <br> ауд. 132 <br> Вишнівський О.В.</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="practice">ВМ [Пз] <br> ауд. 320 <br> Олімпієва Ю.І.</td>
+                    <td class="lectures">УМ-2022 [Лк] <br> ауд. Дистанц. <br> Стежко С.О.</td>
+                </tr>
+                <tr>
+                    <td>09:45 - 11:20</td>
+                    <td class="lectures">ПППІ-15 [Лк] <br> ауд. Дистанц. <br> Сватко В.В.</td>
+                    <td class="labs">ДО [Лб] <br> ауд. 301 <br> Бажан Т.О.</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="practice">УМ-2022 [Пз] <br> ауд. 129 <br> Стежко С.О.</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>11:45 - 13:20</td>
+                    <td class="lectures">WEB тех-2016 [Лк] <br> ауд. Дистанц. <br> Дзюба В.В.</td>
+                    <td class="labs">WEB тех-2016 [Лб] <br> ауд. 221 <br> Дзюба В.В.</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="practice">ПППІ-15 [Пз] <br> ауд. 207 <br> Сватко В.В.</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>13:30 - 15:05</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="practice">ВМ [Пз] <br> ауд. 511 <br> Олімпієва Ю.І.</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>15:15 - 16:50</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="seminars">ФЛ [Сем] <br> ауд. 223 <br> Власенко В.О.</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>17:00 - 18:35</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 30.09.2024 - 06.10.2024 -->
+    <section>
+        <h2>Розклад на тиждень 30 вересня - 6 жовтня 2024</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Час</th>
+                    <th>30.09.2024<br>Понеділок</th>
+                    <th>01.10.2024<br>Вівторок</th>
+                    <th>02.10.2024<br>Середа</th>
+                    <th>03.10.2024<br>Четвер</th>
+                    <th>04.10.2024<br>П'ятниця</th>
+                    <th>05.10.2024<br>Субота</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:00 - 09:35</td>
+                    <td class="lectures">ВМ [Лк] <br> ауд. Дистанц. <br> Білоусова С.В.</td>
+                    <td class="practice">ООП-2016 [Пз] <br> ауд. 219 <br> Вишнівський О.В.</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="lectures">УМ-2022 [Лк] <br> ауд. Дистанц. <br> Стежко С.О.</td>
+                </tr>
+                <tr>
+                    <td>09:45 - 11:20</td>
+                    <td class="lectures">ДО [Лк] <br> ауд. Дистанц. <br> Бажан Т.О.</td>
+                    <td class="practice">ДО [Пз] <br> ауд. 320 <br> Бажан Т.О.</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>11:45 - 13:20</td>
+                    <td class="lectures">ООП-2016 [Лк] <br> ауд. Дистанц. <br> Вишнівський О.В.</td>
+                    <td class="practice">WEB тех-2016 [Пз] <br> ауд. 0-25 <br> Дзюба В.В.</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="practice">ПППІ-15 [Пз] <br> ауд. 207 <br> Сватко В.В.</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>13:30 - 15:05</td>
+                    <td class="lectures">ФЛ [Лк] <br> ауд. Дистанц. <br> Власенко В.О.</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="practice">ВМ [Пз] <br> ауд. 511 <br> Олімпієва Ю.І.</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>15:15 - 16:50</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="labs">ВМ [Лб] <br> ауд. 517 <br> Олімпієва Ю.І.</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>17:00 - 18:35</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="practice">ФВ [Пз] <br> ауд. Стадіон <br> Безуглий Ю.Б.</td>
+                    <td>---</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 07.10.2024 - 13.10.2024 -->
+    <section>
+        <h2>Розклад на тиждень 7-13 жовтня 2024</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Час</th>
+                    <th>07.10.2024<br>Понеділок</th>
+                    <th>08.10.2024<br>Вівторок</th>
+                    <th>09.10.2024<br>Середа</th>
+                    <th>10.10.2024<br>Четвер</th>
+                    <th>11.10.2024<br>П'ятниця</th>
+                    <th>12.10.2024<br>Субота</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:00 - 09:35</td>
+                    <td class="lectures">ВМ [Лк] <br> ауд. Дистанц. <br> Білоусова С.В.</td>
+                    <td class="labs">ООП-2016 [Лб] <br> ауд. 132 <br> Вишнівський О.В.</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="practice">ВМ [Пз] <br> ауд. 320 <br> Олімпієва Ю.І.</td>
+                    <td class="lectures">УМ-2022 [Лк] <br> ауд. Дистанц. <br> Стежко С.О.</td>
+                </tr>
+                <tr>
+                    <td>09:45 - 11:20</td>
+                    <td class="lectures">ПППІ-15 [Лк] <br> ауд. Дистанц. <br> Сватко В.В.</td>
+                    <td class="labs">ДО [Лб] <br> ауд. 301 <br> Бажан Т.О.</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="practice">УМ-2022 [Пз] <br> ауд. 129 <br> Стежко С.О.</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>11:45 - 13:20</td>
+                    <td class="lectures">WEB тех-2016 [Лк] <br> ауд. Дистанц. <br> Дзюба В.В.</td>
+                    <td class="labs">WEB тех-2016 [Лб] <br> ауд. 221 <br> Дзюба В.В.</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="practice">ПППІ-15 [Пз] <br> ауд. 207 <br> Сватко В.В.</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>13:30 - 15:05</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="practice">ВМ [Пз] <br> ауд. 511 <br> Олімпієва Ю.І.</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>15:15 - 16:50</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="seminars">ФЛ [Сем] <br> ауд. 223 <br> Власенко В.О.</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>17:00 - 18:35</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 14.10.2024 - 20.10.2024 -->
+    <section>
+        <h2>Розклад на тиждень 14-20 жовтня 2024</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Час</th>
+                    <th>14.10.2024<br>Понеділок</th>
+                    <th>15.10.2024<br>Вівторок</th>
+                    <th>16.10.2024<br>Середа</th>
+                    <th>17.10.2024<br>Четвер</th>
+                    <th>18.10.2024<br>П'ятниця</th>
+                    <th>19.10.2024<br>Субота</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:00 - 09:35</td>
+                    <td class="lectures">ВМ [Лк] <br> ауд. Дистанц. <br> Білоусова С.В.</td>
+                    <td class="practice">ООП-2016 [Пз] <br> ауд. 219 <br> Вишнівський О.В.</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="lectures">УМ-2022 [Лк] <br> ауд. Дистанц. <br> Стежко С.О.</td>
+                </tr>
+                <tr>
+                    <td>09:45 - 11:20</td>
+                    <td class="lectures">ДО [Лк] <br> ауд. Дистанц. <br> Бажан Т.О.</td>
+                    <td class="practice">ДО [Пз] <br> ауд. 320 <br> Бажан Т.О.</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>11:45 - 13:20</td>
+                    <td class="lectures">ООП-2016 [Лк] <br> ауд. Дистанц. <br> Вишнівський О.В.</td>
+                    <td class="practice">WEB тех-2016 [Пз] <br> ауд. 0-25 <br> Дзюба В.В.</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="practice">ПППІ-15 [Пз] <br> ауд. 207 <br> Сватко В.В.</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>13:30 - 15:05</td>
+                    <td class="lectures">ФЛ [Лк] <br> ауд. Дистанц. <br> Власенко В.О.</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="practice">ВМ [Пз] <br> ауд. 511 <br> Олімпієва Ю.І.</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>15:15 - 16:50</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="labs">ВМ [Лб] <br> ауд. 517 <br> Олімпієва Ю.І.</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>17:00 - 18:35</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="practice">ФВ [Пз] <br> ауд. Стадіон <br> Безуглий Ю.Б.</td>
+                    <td>---</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 21.10.2024 - 27.10.2024 -->
+    <section>
+        <h2>Розклад на тиждень 21-27 жовтня 2024</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Час</th>
+                    <th>21.10.2024<br>Понеділок</th>
+                    <th>22.10.2024<br>Вівторок</th>
+                    <th>23.10.2024<br>Середа</th>
+                    <th>24.10.2024<br>Четвер</th>
+                    <th>25.10.2024<br>П'ятниця</th>
+                    <th>26.10.2024<br>Субота</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:00 - 09:35</td>
+                    <td class="lectures">ВМ [Лк] <br> ауд. Дистанц. <br> Білоусова С.В.</td>
+                    <td class="labs">ООП-2016 [Лб] <br> ауд. 132 <br> Вишнівський О.В.</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="practice">ВМ [Пз] <br> ауд. 320 <br> Олімпієва Ю.І.</td>
+                    <td class="lectures">УМ-2022 [Лк] <br> ауд. Дистанц. <br> Стежко С.О.</td>
+                </tr>
+                <tr>
+                    <td>09:45 - 11:20</td>
+                    <td class="lectures">ПППІ-15 [Лк] <br> ауд. Дистанц. <br> Сватко В.В.</td>
+                    <td class="labs">ДО [Лб] <br> ауд. 301 <br> Бажан Т.О.</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="practice">УМ-2022 [Пз] <br> ауд. 129 <br> Стежко С.О.</td>
+                    <td class="practice">ВМ [Пз] <br> ауд. Дистанц. <br> Олімпієва Ю.І.</td>
+                </tr>
+                <tr>
+                    <td>11:45 - 13:20</td>
+                    <td class="lectures">WEB тех-2016 [Лк] <br> ауд. Дистанц. <br> Дзюба В.В.</td>
+                    <td class="labs">WEB тех-2016 [Лб] <br> ауд. 221 <br> Дзюба В.В.</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="practice">ПППІ-15 [Пз] <br> ауд. 207 <br> Сватко В.В.</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>13:30 - 15:05</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="practice">ВМ [Пз] <br> ауд. 511 <br> Олімпієва Ю.І.</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>15:15 - 16:50</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="seminars">ФЛ [Сем] <br> ауд. 223 <br> Власенко В.О.</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>17:00 - 18:35</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</body>
+</html>
