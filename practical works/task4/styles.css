@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/custom-font.ttf') format('truetype');
+}
+
+body {
+    font-family: 'CustomFont', Arial, sans-serif; /* Use the custom font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #2c2c2c;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(22, 70px); /* Increased width of keys */
+    gap: 10px; /* Increased gap between keys */
+    padding: 30px; /* Added padding around the keyboard */
+    background-color: #003f0e;
+    border-radius: 15px; /* Slightly increased border radius */
+}
+
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px; /* Increased height of keys */
+    background-color: #c0bfbf;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 18px; /* Increased font size */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    user-select: none;
+    animation: rgbText 3s infinite alternate; /* Add RGB animation */
+}
+
+@keyframes rgbText {
+    0% { color: red; }
+    25% { color: green; }
+    50% { color: blue; }
+    75% { color: yellow; }
+    100% { color: purple; }
+}
+
+.key.function {
+    background-color: #d3d3d3;
+}
+
+.key:hover {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.key:active {
+    transform: translateY(4px); /* Moves the key down */
+    box-shadow: none; /* Removes shadow on press */
+}
+
+/* Key specific styles */
+.key.esc { background-color: #ffdddd; }
+.key.space { grid-column: span 6; }
+.key.backspace { grid-column: span 2; }
+.key.tab { grid-column: span 2; }
+.key.enter { grid-column: span 2; }
+.key.shift { grid-column: span 2; }
+.key.tilde { grid-column-start: 0; grid-column-end: 2;}
+.up-arrow, .down-arrow, .left-arrow, .right-arrow {
+    font-weight: bold;
+}
+.up-arrow {
+    grid-column-start: 17;
+}
+
+/* Special area for numpad */
+.key.numpad { background-color: #e0e0f0; }
+.key.number.four {
+    grid-column-start: 19;
+}
+.key.number.one {
+    grid-column-start: 19;
+}
+.key.numpad_enter {
+    grid-row-start: 5;
+    grid-row-end: 7;
+    grid-column-start: 22;
+    height: 150px; /* Increased height for numpad enter key */
+}
+.key.number.plus {
+    grid-row-start: 3;
+    grid-row-end: 7;
+    grid-column-start: 22;
+    height: 125px; /* Increased height for numpad plus key */
+}
+
+/* New animation styles */
+.key:focus {
+    outline: none; /* Removes default focus outline */
+}
+
+.key:active {
+    transform: scale(0.95) translateY(3px); /* Scale down and move down */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4); /* Inset shadow for a pressed look */
+    background-color: #e5e5e5; /* Change background color when pressed */
+}
+
+.key.shift:hover, .key.ctrl:hover, .key.alt:hover {
+    background-color: #f0f0f0; /* Lighten the color for modifier keys */
+}

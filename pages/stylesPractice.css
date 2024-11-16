@@ -1,0 +1,132 @@
+/* Basic Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: #333;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 1em;
+    width: 100%;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+    list-style: none;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #ffd700; /* Changes to gold on hover */
+}
+
+/* Hero Section */
+.hero {
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    margin-bottom: 1em;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+/* General Styling */
+.works-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 1em;
+}
+
+.work-item {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1em;
+}
+
+.work-item h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.work-item p {
+    margin: 0.5em 0;
+    color: #666;
+    font-size: 1em;
+}
+
+.work-item a {
+    display: inline-block;
+    margin-top: 0.5em;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.work-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer Styling - Always at bottom */
+footer {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+footer p {
+    margin: 0.5em 0;
+}
+
+footer a i {
+    font-size: 1.5em;
+    color: #333;
+    transition: color 0.3s, transform 0.2s;
+    padding: 0.5em;
+}
+
+footer a i:hover {
+    color: #0056b3;
+    transform: scale(1.2); /* Slightly increases icon size on hover */
+}
+
+
+/* Responsive */
+@media (min-width: 768px) {
+    .works-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .works-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

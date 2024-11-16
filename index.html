@@ -5,56 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Особистий вебсайт Башинський Роман</title>
     <link rel="stylesheet" href="styles/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    <!-- Заголовок сторінки -->
+<body class="home-page">
+    <!-- Header -->
     <header>
-        <h1>Особистий вебсайт Башинський Роман</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="pages/about.html">Про мене</a></li>
+                <li><a href="pages/practical.html">Практичні роботи</a></li>
+                <li><a href="pages/labs.html">Лабораторні заняття</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Меню навігації -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Головна</a></li>
-            <li><a href="pages/about.html">Про мене</a></li>
-            <li><a href="pages/practical.html">Практичні роботи</a></li>
-            <li><a href="pages/labs.html">Лабораторні заняття</a></li>
-        </ul>
-    </nav>
-
-    <!-- Секція "Про мене" -->
-    <section id="about">
-        <h2>Про мене</h2>
-        <img src="images/selfportrait.gif" alt="Фото студента">
-        <p>ПІБ: Башинський Роман</p>
-        <p>Контакт: st8467423@stud.duikt.edu.ua</p>
-        <p>Коротка біографія: Студент 2 курсу університету ДУІКТ.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Привіт, я Башинський Роман, студент-програміст</h1>
+            <p>ПІБ: Башинський Роман</p>
+            <p>Контакт: st8467423@stud.duikt.edu.ua</p>
+            <p>Коротка біографія: Студент 2 курсу університету ДУІКТ.</p>
+            <button>Download Resume</button>
+        </div>
+        <img src="images/selfportrait.gif" alt="Фото студента" class="profile-img">
     </section>
 
-    <!-- Секція "Практичні роботи" -->
-    <section id="practical">
-        <h2>Практичні роботи</h2>
-        <ul>
-            <li><a href="practical works/task1/task1.html">Практична робота №1</a></li>
-            <li><a href="pages/practical.html">Інші...</a></li>
-            <!-- Додати інші практичні роботи -->
-        </ul>
+    <!-- Recent Posts Section -->
+    <section class="recent-posts">
+        <h2>Останні роботи</h2>
+        <div class="posts-columns">
+            <!-- Recent Lab Works Column -->
+            <div class="lab-works">
+                <h3>Останні лабораторні роботи</h3>
+                <div class="post">
+                    <h4>Лабораторна робота №4</h4>
+                    <p>22 Oct 2024 | Тижневий план</p>
+                    <a href="./lab works/lab4/lab4.html">Перейти</a>
+                </div>
+                <div class="post">
+                    <h4>Лабораторна робота №2</h4>
+                    <p>24 Sep 2024 | CSS селектори</p>
+                    <a href="./lab works/lab2/lab2.html">Перейти</a>
+                </div>
+                <a href="pages/labs.html" class="view-all">Подивитися всі...</a>
+            </div>
+
+            <!-- Recent Practice Works Column -->
+            <div class="practice-works">
+                <h3>Останні практичні роботи</h3>
+                <div class="post">
+                    <h4>Практична робота №4</h4>
+                    <p>29 Oct 2024 | Клавіатура</p>
+                    <a href="./practical works/task4/task4.html">Перейти</a>
+                </div>
+                <div class="post">
+                    <h4>Практична та лабораторна робота №3</h4>
+                    <p>10 Oct 2024 | Ютуб копія</p>
+                    <a href="./practical works/task3/task3.html">Перейти</a>
+                </div>
+                <a href="pages/practical.html" class="view-all">Подивитися всі...</a>
+            </div>
+        </div>
     </section>
 
-    <!-- Секція "Лабораторні заняття" -->
-    <section id="labs">
-        <h2>Лабораторні заняття</h2>
-        <ul>
-            <li><a href="https://remeraldb.github.io/WEB-practice/">Лабораторна робота №1</a></li>
-            <li><a href="pages/labs.html">Інші...</a></li>
-            <!-- Додати інші лабораторні роботи -->
-        </ul>
+    <!-- Featured Works Section -->
+    <section class="featured-works">
+        <h2>Вибрані роботи</h2>
+        <div class="posts-columns">
+            <div class="featured-labs">
+                <h3>Вибрані лаби</h3>
+                <div class="post">
+                    <img src="images/featured-lab1.jpg" alt="Lab Work 1" class="featured-image">
+                    <h4>Лабораторна робота №1</h4>
+                    <p>10 Sep 2024 | Форма регістрації</p>
+                    <a href="https://remeraldb.github.io/WEB-practice/">Перейти</a>
+                </div>
+                <div class="post">
+                    <img src="images/featured-lab2.jpg" alt="Lab Work 2" class="featured-image">
+                    <h4>Лабораторна та Практична робота №3</h4>
+                    <p>10 Oct 2024 | Ютуб копія</p>
+                    <a href="./practical works/task3/task3.html">Перейти</a>
+                </div>
+            </div>
+
+            <div class="featured-practices">
+                <h3>Вибрані практичні</h3>
+                <div class="post">
+                    <img src="images/featured-practice1.jpg" alt="Practice Work 1" class="featured-image">
+                    <h4>Практична робота №1</h4>
+                    <p>17 Sep 2024 | Розклад</p>
+                    <a href="./practical works/task1/task1.html">Перейти</a>
+                </div>
+                <div class="post">
+                    <img src="images/featured-practice2.jpg" alt="Practice Work 2" class="featured-image">
+                    <h4>Практична робота №4</h4>
+                    <p>29 Oct 2024 | Клавіатура</p>
+                    <a href="./practical works/task4/task4.html">Перейти</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Футер -->
+    <!-- Footer -->
     <footer>
         <p>Контакти: Башинський Роман | email: st8467423@stud.duikt.edu.ua</p>
-        <p>Соціальні мережі: <a href="https://github.com/Remeraldb">GitHub</a></p>
+        <p><a href="https://github.com/Remeraldb" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </p>
         <p>&copy; 2024, ДУІКТ</p>
     </footer>
 </body>

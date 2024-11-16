@@ -1,103 +1,254 @@
-/* Базові стилі для сторінки */
-body {
+/* Basic Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
     font-family: "Lucida Console", "Courier New", monospace;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
     color: #333;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
 }
 
-header {
+/* Apply background image only on the main page */
+body.home-page {
+    background-image: url('../images/heroback.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header and Footer Styling */
+header, footer {
     background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-}
-
-nav {
-    background-color: #333;
-    padding: 0.5em;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 1em;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5em;
-}
-
-nav ul li a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-section {
-    margin: 2em;
-}
-
-h2 {
-    color: #4CAF50;
-}
-
-table {
+    color: #fff;
+    padding: 1em;
     width: 100%;
-    border-collapse: collapse;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+    list-style: none;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #ffd700; /* Changes to gold on hover */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligns text to the left, image to the right */
+    padding: 2em;
+    background-color: #ffffff; /* Fallback background color */
+    background-size: cover;
+    background-position: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the hero section within the page */
+}
+
+.hero-content {
+    text-align: left;
+    max-width: 60%; /* Adjust width for a balanced layout */
+}
+
+.hero h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 1em;
+}
+
+.hero button {
+    display: inline-block; /* Ensures proper layout */
+    font-size: 1em;
+    font-weight: bold;
+    color: #007BFF;
+    text-decoration: none;
+    align-self: flex-start;
+    padding: 0.5em 1em;
+    border: 2px solid #007BFF;
+    border-radius: 4px;
+    margin-top: 1em; /* Add spacing above the button */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.hero button:hover {
+    background-color: #007BFF;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 0%;
+    margin-left: 2em;
+}
+
+/* Recent and Featured Posts Section */
+.recent-posts, .featured-works {
+    background-color: #f1f4f8;
+    padding: 2em;
+    text-align: center;
+}
+
+.recent-posts h2, .featured-works h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+.posts-columns {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to wrap on small screens */
+    gap: 1em;
+    justify-content: center;
     margin-top: 1em;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
-    padding: 0.5em;
-    text-align: left;
+.posts-columns > div {
+    background-color: #fff;
+    padding: 1em;
+    width: 100%;
+    max-width: 600px; /* Increased the width of the cells to 2 times the original */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-th {
-    background-color: #4CAF50;
-    color: white;
+/* Featured Image Styling */
+.featured-image {
+    width: 100%;
+    height: auto;
+    max-width: 250px; /* Set a maximum width for the images */
+    border-radius: 8px;
+    margin-bottom: 1em; /* Space between image and text */
+    object-fit: cover; /* Ensures image fits nicely in the container */
 }
 
-img {
-    max-width: 200px;
-    border-radius: 0%;
-}
-
-footer {
-    background-color: #333;
-    color: white;
+/* Featured and Latest Post Blocks */
+.featured-works .post,
+.recent-posts .post {
+    margin-bottom: 1em;
+    padding: 1.5em;
+    width: 100%;
+    max-width: 600px; /* Ensures both featured and recent works are the same width */
     text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+.featured-works .post h4,
+.recent-posts .post h4 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 0.5em;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
+.featured-works .post p,
+.recent-posts .post p {
+    color: #777;
+    font-size: 0.9em;
 }
 
-th, td {
-    padding: 8px;
+.featured-works .post a,
+.recent-posts .post a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.featured-works .post a:hover,
+.recent-posts .post a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Featured Works Section with Side-by-Side Layout */
+.featured-works .post {
+    display: flex;
+    align-items: center;
     text-align: left;
+    margin-bottom: 1em;
+    padding: 1em;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-th {
-    background-color: #f2f2f2;
+/* Adjust the image to align on the left side */
+.featured-works .post .featured-image {
+    width: 150px; /* Adjust width as desired */
+    height: auto;
+    margin-right: 1em; /* Space between the image and text */
+    border-radius: 8px;
+    object-fit: cover;
 }
 
+/* Adjust the text content */
+.featured-works .post h4 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.featured-works .post p {
+    color: #777;
+    font-size: 0.9em;
+    margin: 0.5em 0;
+}
+
+.featured-works .post a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.post{
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styling */
+footer p {
+    margin: 0.5em 0;
+    text-align: center;
+}
+
+footer a i {
+    font-size: 1.5em;
+    color: #333;
+    transition: color 0.3s, transform 0.2s;
+    padding: 0.5em;
+}
+
+footer a i:hover {
+    color: #0056b3;
+    transform: scale(1.2); /* Slightly increases icon size on hover */
+}
+
+footer a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
