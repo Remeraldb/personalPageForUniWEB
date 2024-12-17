@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #222222;
+  color: #f0e68c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.greeting-card {
+  width: 80%;
+  max-width: 600px;
+  background-color: #ff6347;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.greeting-card__header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.greeting-card__header--highlighted {
+  color: #f0e68c;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.greeting-card__message {
+  font-size: 1.2rem;
+  color: #fff;
+  line-height: 1.5;
+  font-weight: 400;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,61 @@
+// Variables
+$primary-color: #ff6347; // A vibrant red (New Year's festive color)
+$secondary-color: #f0e68c; // A golden yellow
+$font-family: 'Arial', sans-serif;
+$background-color: #222222; // Dark background to highlight the card
+$highlight-color: #fff; // White text for highlighted header
+
+// Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+// Body Styles
+body {
+  background-color: $background-color;
+  color: $secondary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+// Greeting Card Block
+.greeting-card {
+  width: 80%;
+  max-width: 600px;
+  background-color: $primary-color;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $highlight-color;
+  }
+
+  &__header--highlighted {
+    color: $secondary-color;
+    background-color: $highlight-color;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  &__message {
+    font-size: 1.2rem;
+    color: $highlight-color;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+}
